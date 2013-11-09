@@ -19,7 +19,7 @@ exit 0
 ```
 Przed uruchomieniem programu nadac prawa do pliku chmod 700!
 uruchomic: ./zad1.sh
-=======
+
 2. Podaj przykład skryptu korzystującego ze zmiennych specjalnych, czyli użyj $0, $1, $2, …, $9, $@, $*, $?, $$.
 ```sh
 #!/bin/bash
@@ -39,4 +39,4 @@ exit 0
 Przed uruchomieniem programu nadac prawa do pliku chmod 700!
 uruchomic: ./zad2.sh 
 
-=======
+
