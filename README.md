@@ -14,7 +14,7 @@ zmienna2=$(pwd)
 echo "\"Ciapki\" – przyklad: $zmienna2"
 exit 0
 
-```
+
 Przed uruchomieniem programu nadac prawa do pliku chmod 700!
 uruchomic: ./zad1.sh
 
