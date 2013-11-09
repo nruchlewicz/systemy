@@ -79,3 +79,13 @@ modulo=$[liczba1%liczba2]
 echo "Modulo liczb wynosi: $modulo" #reszta
 exit 0
 ```
+
+5. Napisać skrypt sprawdzający, czy w katalogu głównym użytkownika istnieje plik .bashrc. (Użyj instrukcji warunkowej if.)
+```sh
+if [ -e ~/.bashrc ]
+# lub rownowaznie: if test -e ~/.bashrc
+then echo "Masz plik .bashrc"
+else echo "Nie masz pliku .bashrc"
+fi
+exit 0
+```
