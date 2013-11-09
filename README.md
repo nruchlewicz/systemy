@@ -1,7 +1,8 @@
 systemy
 =======
 1. Podaj przykład skryptu wykorzystującego zmienne i zmienne środowiska np. USER, PWD, HOME.
-```sh
+``` sh
+``` sh 
 #!/bin/bash
 echo "Czesc $USER"
 echo "twoj aktualny katalog to $PWD"
