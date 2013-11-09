@@ -39,10 +39,10 @@ uruchomic: ./zad2.sh
 
 3. Podać przykład skryptu korzystającego z tablic (Użyj declare, unset, *, @, # ).
 ```sh
-owoc[0]="jablko"
-owoc[1]="gruszka"
-owoc[2]="sliwka"
-owoc[3]="wisnia"
+owoc[0]="jablko"  //deklaracja pierwszego elem. tablicy
+owoc[1]="gruszka" //--||-- drugiego --||-- 
+owoc[2]="sliwka"  //--||-- trzeciego..
+owoc[3]="wisnia"  //--||-- czwartego..
 echo "Pierwszy element tablicy owoc to: ${owoc[0]}"
 echo "Wszystkie elementy tablicy owoc to: ${owoc[*]}"
 echo "Wszystkie elementy tablicy owoc to: ${owoc[@]}"
@@ -56,5 +56,26 @@ tab1=(`cat /etc/passwd`)
 echo "Tablica tab1 ma ${#tab1[*]} elementow"
 declare tab2=(`cat /etc/passwd`)
 echo "Tablica tab2 ma ${#tab2[*]} elementow"
+exit 0
+```
+
+4. Napisać skrypt obliczający sumę, różnicę i iloczyn dwóch wczytanych liczb całkowitych. (Użyj polecenia read.)
+```sh
+#!/bin/bash
+echo -n "Podaj pierwsza liczbe: "
+read liczba1
+echo -n "Podaj druga liczbe: "
+read liczba2
+echo
+suma=$[liczba1 + liczba2] #1 sposob
+echo "Suma liczb wynosi: $suma"
+roznica=$((liczba1-liczba2)) #2 sposob
+echo "Roznica liczb wynosi: $roznica"
+let iloczyn=liczba1*liczba2 #3 sposob
+echo "Iloczyn liczb wynosi: $iloczyn"
+iloraz=$[liczba1/liczba2]
+echo "Iloraz liczb wynosi: $iloraz" #czesc calkowita
+modulo=$[liczba1%liczba2]
+echo "Modulo liczb wynosi: $modulo" #reszta
 exit 0
 ```
