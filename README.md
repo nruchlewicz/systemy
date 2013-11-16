@@ -147,3 +147,35 @@ else echo "Nie masz pliku $1"
 fi
 exit 0
 ```
+
+skrypt, który wypisze na ekran zawartość pliku solar.txt
+```sh
+#!/bin/bash
+cat solar.txt
+exit 0
+```
+
+skrypt, który wypisze na ekran zawartość pliku podanego jago parametr.
+```sh
+#!/bin/bash
+cat $1
+exit 0
+```
+skrypt, który wypisze na ekran zawartość pliku podanego jago parametr, jeśli nie mam takiego pliku zostanie wyświetlony odpowiedni komunikat.
+```sh
+#!/bin/bash
+if [ -e $1 ]
+then cat $1
+else echo "Nie masz pliku $1"
+fi
+exit 0
+```
+
+skrypt, który pobierze nazwę dwóch plików i dopisze zawartość pierwszego do drugiego.
+```sh
+#!/bin/bash
+cat $1 > $2
+exit 0
+```
+
+
