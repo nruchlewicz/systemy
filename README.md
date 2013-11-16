@@ -2,7 +2,7 @@ systemy
 =======
 
 1. Podaj przykład skryptu wykorzystującego zmienne i zmienne środowiska np. USER, PWD, HOME.
-2. 
+
 ```sh
 #!/bin/bash
 echo "Czesc $USER"
@@ -20,7 +20,7 @@ exit 0
 Przed uruchomieniem programu nadac prawa do pliku chmod 700!
 uruchomic: ./zad1.sh
 
-2. Podaj przykład skryptu korzystującego ze zmiennych specjalnych, czyli użyj $0, $1, $2, …, $9, $@, $*, $?, $$.
+2. przykład skryptu korzystującego ze zmiennych specjalnych, czyli użyj $0, $1, $2, …, $9, $@, $*, $?, $$.
 ```sh
 #!/bin/bash
 echo "Nazwa biezacego skryptu: $0"
@@ -135,5 +135,15 @@ imie[4]=$5
 echo "${imie[*]}"
 eval R=($(printf "%s\n" "${imie[@]}" | sort $u))
 echo "${R[@]}"
+exit 0
+```
+
+skrypt sprawdzający, czy istnieje podany jako parametr plik i wypisujący odpowiedni komunikat na ekranie. 
+```sh
+#!/bin/bash
+if [ -e $1 ]
+then echo "Masz plik $1"
+else echo "Nie masz pliku $1"
+fi
 exit 0
 ```
