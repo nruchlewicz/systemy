@@ -2,6 +2,7 @@ systemy
 =======
 
 1. Podaj przykład skryptu wykorzystującego zmienne i zmienne środowiska np. USER, PWD, HOME.
+2. 
 ```sh
 #!/bin/bash
 echo "Czesc $USER"
@@ -14,6 +15,7 @@ zmienna2=$(pwd)
 echo "\"Ciapki\" – przyklad: $zmienna2"
 exit 0
 ```
+
 
 Przed uruchomieniem programu nadac prawa do pliku chmod 700!
 uruchomic: ./zad1.sh
@@ -87,5 +89,51 @@ if [ -e ~/.bashrc ]
 then echo "Masz plik .bashrc"
 else echo "Nie masz pliku .bashrc"
 fi
+exit 0
+```
+#LAB5
+
+skrypt pobierający z wiersza poleceń 2 argumenty będące bokami prostokąta i obliczający jego pole. 
+```sh
+#!/bin/bash
+
+pole=$[$1 * $2]
+echo "Pole prostokata wynosi: $pole"
+exit 0
+```
+
+skrypt obliczający a do potęgi n, a - liczba naturalna (bez zera), n - liczba naturalna (z zerem). Funkcja ma posiadać dwa argumenty a i n.
+Przetestuj działanie tej funkcji.
+```sh
+#!/bin/bash
+funkcja_potega()
+{
+echo "liczba a=: $1"
+echo "do potegi: $2"
+i=1
+potega=1
+while [ "$i" -le $2 ]
+do
+potega=$(($potega*$1))
+i=$[i + 1]
+done
+echo "wynosi: $potega" 
+}
+
+funkcja_potega "$1" "$2"
+exit 0
+```
+
+Srypt wczytujący 5 imion (użyj tablic), sortujący imiona w kolejności alfabetycznej (tak jak w książce telefonicznej) i wypisujący posortowane imiona na ekranie. 
+```sh 
+#!/bin/bash
+imie[0]=$1
+imie[1]=$2
+imie[2]=$3
+imie[3]=$4
+imie[4]=$5
+echo "${imie[*]}"
+eval R=($(printf "%s\n" "${imie[@]}" | sort $u))
+echo "${R[@]}"
 exit 0
 ```
